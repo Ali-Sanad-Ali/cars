@@ -10,7 +10,7 @@ class Carousel extends StatelessWidget {
       child: CarouselSlider(
         items: [1, 2, 3, 4, 5].map((e) {
           return Container(
-            margin: EdgeInsets.all(5.0),
+            // margin: EdgeInsets.all(5.0),
             decoration: BoxDecoration(
               color: Colors.blueAccent,
               borderRadius: BorderRadius.circular(10.0),
@@ -27,7 +27,6 @@ class Carousel extends StatelessWidget {
           height: 200.0,
           enlargeCenterPage: false,
           autoPlay: true,
-          aspectRatio: 10 / 9,
           autoPlayCurve: Curves.fastOutSlowIn,
           enableInfiniteScroll: true,
           autoPlayAnimationDuration: Duration(milliseconds: 1000),
