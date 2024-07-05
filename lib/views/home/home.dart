@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.all(30.0),
         child: Column(
           children: [
-            CustomSearchBar(),
+            Header(),
           ],
         ),
       ),
