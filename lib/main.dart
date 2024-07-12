@@ -1,4 +1,5 @@
-import 'package:cars_app/views/home/home.dart';
+import 'package:cars_app/utils/routes/app_routes.dart';
+import 'package:cars_app/views/home/screen/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,9 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: Routes.initialRoute,
+      onGenerateRoute: AppRoutes.generateRoute,
       theme: ThemeData(colorScheme: ColorScheme.light().copyWith()),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }

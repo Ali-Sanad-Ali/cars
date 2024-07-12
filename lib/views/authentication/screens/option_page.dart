@@ -1,9 +1,7 @@
-import 'package:cars_app/views/authentication/screens/login.dart';
-import 'package:cars_app/views/authentication/screens/registeration.dart';
-import 'package:cars_app/views/authentication/widgets/custom_button.dart';
-import 'package:cars_app/views/home/home.dart';
-import 'package:cars_app/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:cars_app/utils/core/colors.dart';
+import 'package:cars_app/views/authentication/screens/login.dart';
+import 'package:cars_app/views/authentication/widgets/custom_button.dart';
 
 class OptionPage extends StatelessWidget {
   const OptionPage({super.key});
@@ -51,10 +49,7 @@ class OptionPage extends StatelessWidget {
                   SizedBox(height: 30),
                   CustomButton(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => Registeration()));
+                      Navigator.pushNamed(context, '/signUp');
                     },
                     btnText: 'Create new account',
                     btnTextColor: Colors.white,
@@ -66,8 +61,7 @@ class OptionPage extends StatelessWidget {
                   GestureDetector(
                     child: Text('Continue as a guest'),
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => HomePage()));
+                      Navigator.pushNamed(context, '/homePage');
                     },
                   ),
                 ],
