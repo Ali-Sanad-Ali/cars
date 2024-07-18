@@ -1,8 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:cars_app/views/home/data/user_model.dart';
 import 'package:cars_app/views/home/widgets/body/body_content.dart';
 import 'package:cars_app/views/home/widgets/categories/category.dart';
 import 'package:cars_app/views/home/widgets/header/header.dart';
-import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   final UserModel user = UserModel(
@@ -10,6 +10,19 @@ class HomePage extends StatelessWidget {
     imageUrl: 'assets/car.jpg',
   );
   HomePage({super.key});
+
+  final List<BodyImages> sampleImages = [
+    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
+    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
+    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
+    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
+    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
+    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
+    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
+    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
+    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
+    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +32,18 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             Header(userModel: user),
-            CategoryContainer(),
-            BodyContent(),
+            CategoryContainer(categories: [
+              'Cars',
+              'Make-up',
+              'Brands',
+              'Groceries',
+              'Special Offer'
+            ]),
+            Expanded(
+              child: BodyContent(
+                bodyImages: sampleImages,
+              ),
+            ),
           ],
         ),
       ),

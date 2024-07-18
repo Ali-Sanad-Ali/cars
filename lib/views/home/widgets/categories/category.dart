@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CategoryContainer extends StatelessWidget {
-  const CategoryContainer({super.key});
+  final List<String> categories;
+
+  const CategoryContainer({super.key, required this.categories});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class CategoryContainer extends StatelessWidget {
           height: 60,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: 10,
+            itemCount: categories.length,
             itemBuilder: (context, i) {
               return Padding(
                 padding: const EdgeInsets.only(right: 10.0, top: 15),
@@ -30,7 +32,7 @@ class CategoryContainer extends StatelessWidget {
                   child: Center(
                       child: Padding(
                     padding: const EdgeInsets.all(12.0),
-                    child: Text('Delivery'),
+                    child: Text(categories[i]),
                   )),
                   decoration: BoxDecoration(
                     color: Colors.amber,
