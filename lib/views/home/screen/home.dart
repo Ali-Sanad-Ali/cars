@@ -4,6 +4,8 @@ import 'package:cars_app/views/home/widgets/body/body_content.dart';
 import 'package:cars_app/views/home/widgets/categories/category.dart';
 import 'package:cars_app/views/home/widgets/header/header.dart';
 
+import '../data/body.dart';
+
 class HomePage extends StatelessWidget {
   final UserModel user = UserModel(
     username: 'Ali',

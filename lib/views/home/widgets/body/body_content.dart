@@ -1,6 +1,8 @@
 import 'package:cars_app/utils/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
+import '../../data/body.dart';
+
 class BodyContent extends StatelessWidget {
   final List<BodyImages> bodyImages;
 
@@ -44,11 +46,4 @@ class BodyContent extends StatelessWidget {
       ),
     );
   }
-}
-
-class BodyImages {
-  final String name;
-  final String imageUrl;
-
-  BodyImages({required this.name, required this.imageUrl});
 }
