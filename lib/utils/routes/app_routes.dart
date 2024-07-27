@@ -2,6 +2,7 @@ import 'package:cars_app/views/authentication/screens/forget_password.dart';
 import 'package:cars_app/views/authentication/screens/login.dart';
 import 'package:cars_app/views/authentication/screens/option_page.dart';
 import 'package:cars_app/views/authentication/screens/registeration.dart';
+import 'package:cars_app/views/home/screen/details_page.dart';
 import 'package:cars_app/views/home/screen/home.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,7 @@ class Routes {
   static const String signUp = '/signUp';
   static const String homePage = '/homePage';
   static const String profilePage = '/profilePage';
+  static const String detailsPage = '/detailsPage';
 }
 
 class AppRoutes {
@@ -27,6 +29,8 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => Registeration());
       case Routes.homePage:
         return MaterialPageRoute(builder: (_) => HomePage());
+      case Routes.detailsPage:
+        return MaterialPageRoute(builder: (_) => DetailsPage());
 
       default:
         return MaterialPageRoute(

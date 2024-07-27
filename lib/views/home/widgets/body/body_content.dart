@@ -1,3 +1,4 @@
+import 'package:cars_app/utils/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class BodyContent extends StatelessWidget {
@@ -17,16 +18,25 @@ class BodyContent extends StatelessWidget {
         crossAxisSpacing: 8.0,
         childAspectRatio: 1.0,
         children: List.generate(bodyImages.length, (index) {
-          return Container(
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 47, 30, 29),
-              borderRadius: BorderRadius.circular(10.0),
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10.0),
-              child: Image.asset(
-                bodyImages[index].imageUrl,
-                fit: BoxFit.cover,
+          return InkWell(
+            onTap: () {
+              Navigator.pushNamed(
+                context,
+                Routes.detailsPage,
+                arguments: bodyImages[index], // Pass the BodyImages object
+              );
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                color: const Color.fromARGB(255, 47, 30, 29),
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10.0),
+                child: Image.asset(
+                  bodyImages[index].imageUrl,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           );
