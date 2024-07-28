@@ -25,7 +25,7 @@ class BodyContent extends StatelessWidget {
               Navigator.pushNamed(
                 context,
                 Routes.detailsPage,
-                arguments: bodyImages[index], // Pass the BodyImages object
+                arguments: bodyImages[index],
               );
             },
             child: Container(

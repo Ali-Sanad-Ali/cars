@@ -14,16 +14,19 @@ class HomePage extends StatelessWidget {
   HomePage({super.key});
 
   final List<BodyImages> sampleImages = [
-    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
-    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
-    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
-    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
-    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
-    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
-    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
-    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
-    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
-    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
+    BodyImages(
+        name: 'Image1',
+        imageUrl: 'assets/car.jpeg',
+        description: 'here is the discription'),
+    BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg', description: ''),
+    BodyImages(name: 'Image2', imageUrl: 'assets/car.jpeg', description: ''),
+    BodyImages(name: 'Image3', imageUrl: 'assets/car.jpeg', description: ''),
+    BodyImages(name: 'Image4', imageUrl: 'assets/car.jpeg', description: ''),
+    BodyImages(name: 'Image5', imageUrl: 'assets/car.jpeg', description: ''),
+    // BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
+    // BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
+    // BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
+    // BodyImages(name: 'Image1', imageUrl: 'assets/car.jpeg'),
   ];
 
   @override
