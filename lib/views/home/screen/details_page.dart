@@ -64,8 +64,8 @@ class DetailsPage extends StatelessWidget {
   }
 
   void _openWhatsAppChat() async {
-    String phoneNumber = '66007607';
-    var url = Uri.parse('http://wa.me/$phoneNumber?text=helloWorld');
+    var url = Uri.parse(
+        'http://wa.me/${bodyImage?.userModel?.contactNumber}?text=is this ${bodyImage?.name} available?');
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
     } else {

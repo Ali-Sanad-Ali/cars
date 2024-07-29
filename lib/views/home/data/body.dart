@@ -1,11 +1,13 @@
+import 'user_model.dart';
+
 class BodyImages {
   String name;
   String imageUrl;
   String description;
-  num? contactNumber;
+  UserModel? userModel;
   BodyImages(
       {required this.name,
       required this.imageUrl,
       required this.description,
-      this.contactNumber});
+      required this.userModel});
 }
