@@ -1,4 +1,5 @@
 import 'package:cars_app/views/home/data/body.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -51,7 +52,7 @@ class DetailsPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: ElevatedButton(
-                    onPressed: _openWhatsAppChat,
+                    onPressed: () => _openWhatsAppChat(context),
                     child: Text('Contact on WhatsApp'),
                   ),
                 ),
@@ -63,13 +64,27 @@ class DetailsPage extends StatelessWidget {
     );
   }
 
-  void _openWhatsAppChat() async {
+  void _openWhatsAppChat(BuildContext context) async {
     var url = Uri.parse(
-        'http://wa.me/${bodyImage?.userModel?.contactNumber}?text=is this ${bodyImage?.name} available?');
+        'whatsapp://send?phone=${bodyImage?.userModel?.contactNumber}&text=${bodyImage?.name}');
     if (await canLaunchUrl(url)) {
       await launchUrl(url);
     } else {
-      throw 'Could not launch $url';
+      showCupertinoDialog(
+          context: context,
+          builder: (context) {
+            return CupertinoAlertDialog(
+              title: Text("Error"),
+              content: Text("Could not launch whatsapp"),
+              actions: [
+                TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Text("ok"))
+              ],
+            );
+          });
     }
   }
 }
