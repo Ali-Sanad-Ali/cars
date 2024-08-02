@@ -1,5 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:cars_app/views/home/data/carosuel.dart';
+import 'package:cars_app/views/home/data/home/carosuel.dart';
 import 'package:flutter/material.dart';
 
 class Carousel extends StatelessWidget {

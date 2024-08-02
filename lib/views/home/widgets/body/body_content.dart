@@ -1,7 +1,7 @@
 import 'package:cars_app/utils/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
-import '../../data/body.dart';
+import '../../data/home/body.dart';
 
 class BodyContent extends StatelessWidget {
   final List<BodyImages> bodyImages;
