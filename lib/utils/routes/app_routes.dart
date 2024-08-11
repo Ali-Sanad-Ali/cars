@@ -5,7 +5,7 @@ import 'package:cars_app/views/authentication/screens/registeration.dart';
 import 'package:cars_app/views/home/screen/details_page.dart';
 import 'package:cars_app/views/home/screen/home.dart';
 import 'package:flutter/material.dart';
-import 'package:cars_app/views/home/data/body.dart';
+import 'package:cars_app/views/home/data/home/body.dart';
 
 class Routes {
   static const String initialRoute = '/optionPage';

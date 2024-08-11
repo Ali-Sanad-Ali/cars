@@ -1,5 +1,5 @@
-import 'package:cars_app/views/home/data/carosuel.dart';
-import 'package:cars_app/views/home/data/user_model.dart';
+import 'package:cars_app/views/home/data/home/carosuel.dart';
+import 'package:cars_app/views/home/data/home/user_model.dart';
 import 'package:cars_app/views/home/widgets/carousel/carousel.dart';
 import 'package:cars_app/views/home/widgets/header/custom_avatar.dart';
 import 'package:cars_app/views/home/widgets/header/custom_text_field.dart';

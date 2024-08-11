@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import 'package:cars_app/views/home/data/body.dart';
 import 'package:flutter/cupertino.dart';
+=======
+import 'package:cars_app/views/home/data/home/body.dart';
+>>>>>>> d34c07b35653ffdba1f997248232604235af4717
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -14,15 +18,14 @@ class DetailsPage extends StatelessWidget {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 16.0, left: 16.0),
+            padding: const EdgeInsets.only(top: 50.0, left: 16.0),
             child: Row(
               children: [
                 InkWell(
                   child: Icon(Icons.arrow_back),
                   onTap: () => Navigator.pop(context),
                 ),
-                SizedBox(
-                    width: 8), // Add some space between the icon and the text
+                SizedBox(width: 8),
                 Text(
                   'Details Page',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
